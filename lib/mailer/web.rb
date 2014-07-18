@@ -4,6 +4,7 @@ require 'sinatra/base'
 
 class Mailer::Web < Sinatra::Base
   post '/happening' do
+    response['Access-Control-Allow-Origin'] = '*'
     params.delete_if{|k,v| v == ""} # delete blanks values
     model = Mailer::Model.new(params[:name], params[:age], params[:email])
     begin

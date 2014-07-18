@@ -31,13 +31,14 @@ class Mailer::Model < Struct.new(:name, :age, :email)
   end
 
   def host_text
-    "Jméno a příjmení: #{self.name}" +
-    "Věk: #{self.age}" +
+    "Jméno a příjmení: #{self.name}\n\n" +
+    "Věk: #{self.age}\n\n" +
     "Email: #{self.email}"
   end
 
   def send_email(from, to, subject, body)
     message = <<MESSAGE_END
+Content-Type: text/plain; charset="utf-8"
 From: <#{from}>
 To: <#{to}>
 Subject: #{subject}
