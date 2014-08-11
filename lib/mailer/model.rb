@@ -22,7 +22,11 @@ class Mailer::Model < Struct.new(:name, :age, :email)
   end
 
   def client_text
-    "Super! Jsme moc rádi, že ses k nám připojil. I nadále sleduj naše webové stránky a buďte v obraze.\n\nSpolečně to dokážeme!\n\nTeam Street Happening of Karlín"
+"Gratulujeme,\n\n
+vaše registrace k účasti na Street Happening of Karlin/kytarovém rekordu byla úspěšná.\n\n
+Děkujeme a těšíme se na vás.\n\n
+Sledujte aktuality na www.karlinhappening.cz\n\n
+Vaše Karlínské Spektrum :)"
   end
 
   def send_emails
