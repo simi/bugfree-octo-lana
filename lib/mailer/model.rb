@@ -22,11 +22,11 @@ class Mailer::Model < Struct.new(:name, :age, :email)
   end
 
   def client_text
-"Gratulujeme,\n\n
-vaše registrace k účasti na Street Happening of Karlin/kytarovém rekordu byla úspěšná.\n\n
-Děkujeme a těšíme se na vás.\n\n
-Sledujte aktuality na www.karlinhappening.cz\n\n
-Vaše Karlínské Spektrum :)"
+    "Gratulujeme,\n
+vaše registrace proběhla úspěšně.\n
+3. 10. 2015 se na vás budeme těšit.\n
+Kytarový rekord společně zdoláme a zapíšeme se tak do české verze Guinnesovy knihy rekordů, snad právě i díky vám.\n
+Váš Petr Janda"
   end
 
   def send_emails
